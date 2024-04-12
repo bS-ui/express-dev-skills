@@ -10,6 +10,9 @@
   <h3><%= skill.description %></h3>
   <p><%= `Years Practiced: ${skill.yearsPracticed}` %></p>
   <p><%= `Skill Level: ${skill.skillLevel}` %></p>
+  <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST" class="delete-form">
+    <button class ="delete" type="submit">Delete Skill</button>
+  </form>
 	<a href="/skills">Go back</a>
 </body>
 </html>
