@@ -7,12 +7,12 @@
 </head>
 <body>
   <h1>Skills</h1>
-  <ul>
-    <% skills.forEach(skill => { %>
-      <li><%= `Skill: ${skill.description}` %></li>
-      <li><%= `Skill Level: ${skill.skillLevel}` %></li>
-    <% }) %>
+  <% skills.forEach(skill => { %>
+  <ul> <a href="/skills/<%= skill._id %>"><%= `${skill.description}` %></a>
+    <li><%= `Skill Level: ${skill.skillLevel}` %></li>
+    <li><%= `Years Practiced: ${skill.yearsPracticed}` %></li>
   </ul>
-  <a href="/">Back</a>
+  <% }) %>
+  <a href="/skills/new">Add New Skill</a>
 </body>
 </html>

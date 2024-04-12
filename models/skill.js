@@ -5,7 +5,8 @@ const Schema = mongoose.Schema
 	
 const skillSchema = new Schema({
   description: String,
-  skillLevel: Number,
+  skillLevel: String,
+  yearsPracticed: Number,
 })
 
 const Skill = mongoose.model('Skill', skillSchema)
